@@ -1,0 +1,183 @@
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: #0d0d0d;
+    color: #f5f5f5;
+    margin: 15px;
+}
+
+
+h1{
+    width: 98%;
+    height: auto;
+    padding-left: 10px;
+}
+h1,h2,h3,h4,p{
+    color: white;
+}
+
+.paragraph{
+    width: 98%;
+    height: auto;
+    padding-left: 10px;
+    /* border: 1px solid white; */
+    /* overflow-wrap: break-word; */
+     
+}
+
+p{
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 1.158px;
+    margin-bottom: 50px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.delete,.new_note{
+    background-color: red;
+    color: yellow;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Delete{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.main{
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    width: 50%;
+}
+
+.main_1{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    
+}
+/* Saare notes ko arrange karne ke liye */
+.notes {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+padding: 10px;
+align-items: flex-start;
+}
+
+/* Har naye note ka alag box */
+.note_box {
+width: 45%;
+min-height: 200px;
+border: 2px solid black;
+border-radius: 10px;
+padding: 15px;
+box-sizing: border-box;
+overflow-wrap: anywhere;
+/* background-color: white; */
+}
+
+/* Heading ki styling */
+.heading_text {
+border-bottom: 1px solid gray;
+padding-bottom: 10px;
+margin-top: 0;
+overflow-wrap: anywhere;
+}
+
+/* Paragraph ki styling */
+.note {
+min-height: 100px;
+margin-bottom: 0;
+white-space: pre-wrap;
+overflow-wrap: anywhere;
+}
+
+/* Box ke andar type karte waqt outline hatana */
+.heading_text:focus,
+.note:focus {
+outline: none;
+}
+
+/* Full screen note */
+.note_box.full_screen {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: black;
+    border: 2px solid black;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Back button */
+.back_button {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0d0d0d;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+}
+
+.back_button.show {
+    display: block;
+}
+
+.note_box.full_screen .delete {
+    display: none;
+}
+
+/* Search box ki width set kar raha hai */
+#search_note {
+
+    display: block;       /* Alag block create karega */
+    margin: 20px auto;    /* Horizontally center karega */
+
+    /* Search box ki width */
+    width: 300px;
+
+    /* Andar spacing de raha hai */
+    padding: 12px;
+
+    /* Corners round kar raha hai */
+    border-radius: 10px;
+
+    /* Border set kar raha hai */
+    border: 1px solid gray;
+
+    /* Input ka default outline remove kar raha hai */
+    outline: none;
+}
+
